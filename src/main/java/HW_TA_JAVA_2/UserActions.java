@@ -5,7 +5,8 @@ import java.util.stream.Collectors;
 
 public class UserActions {
     public List<Car> carList = new ArrayList();
-    Scanner console = new Scanner (System.in);
+    Scanner console = new Scanner(System.in);
+
     public void userActions() {
         try {
             Car car;
@@ -41,11 +42,11 @@ public class UserActions {
         }
     }
 
-    public enum EnumActions{
+    public enum EnumActions {
         ADD, REMOVE, SHOW, SORT, EXIT;
     }
 
-    public void addCar(){
+    public void addCar() {
         System.out.println("Please chose brand: bmw or mercedes");
         String choiceAdd = console.nextLine();
         if (choiceAdd.equalsIgnoreCase("bmw")) {
@@ -56,16 +57,19 @@ public class UserActions {
             carList.add(car);
         }
     }
-    public void  removeCar(){
+
+    public void removeCar() {
         System.out.println("Please type number of car, you want to delete");
-        int  choiceRemove = console.nextInt();
+        int choiceRemove = console.nextInt();
         carList.remove(choiceRemove);
 
     }
-    public void showCar(){
+
+    public void showCar() {
         carList.stream().forEach(System.out::println);
     }
-    public List<Car> sortCar(){
+
+    public List<Car> sortCar() {
         carList = carList.stream().sorted(new CarComparator()).collect(Collectors.toList());
         return carList;
     }

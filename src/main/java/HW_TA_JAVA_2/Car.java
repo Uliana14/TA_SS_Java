@@ -3,11 +3,11 @@ package HW_TA_JAVA_2;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Car implements Alarm, Vehicle{
+public class Car implements Alarm, Vehicle {
 
     String brand;
     String model;
-    int speed =0;
+    int speed = 0;
 
     public void setBrand(String brand) {
         this.brand = brand;
@@ -50,21 +50,20 @@ public class Car implements Alarm, Vehicle{
     public int getSpeed() {
         return speed;
     }
+
     public String getBrand() {
         return brand;
     }
 
     @Override
     public void speedUp(int speedToUp) {
-      speed=speedToUp;
+        speed = speedToUp;
     }
 
     @Override
     public void slowDown(int speedToDown) {
-        speed=speedToDown;
+        speed = speedToDown;
     }
-
-
 
 
 }

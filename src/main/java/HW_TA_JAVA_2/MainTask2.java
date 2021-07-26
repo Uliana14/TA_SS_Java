@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class MainTask2 {
     public static void main(String[] args) {
-UserActions user = new UserActions();
-user.userActions();
+        UserActions user = new UserActions();
+        user.userActions();
 
     }
 
